@@ -1,1 +1,55 @@
 /* 여기에 스타일을 구현해 주세요 */
+body {
+  position: relative;
+}
+
+.avatars {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.avatars li {
+  float: left;
+  position: relative;
+
+  &:nth-child(1),
+  &:nth-child(2),
+  &:nth-child(3),
+  &:nth-child(5),
+  &:nth-child(6),
+  &:nth-child(7) {
+    margin-right: 20px;
+  }
+
+  &:nth-child(5) {
+    clear: both;
+  }
+
+  &:nth-child(n + 5) {
+    margin-top: 20px;
+  }
+
+  img {
+    border-radius: 50%;
+  }
+
+  span {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 50%;
+    display: block;
+    width: 1em;
+    height: 1em;
+
+    &.online {
+      background-color: #4cfe88;
+    }
+
+    &.offline {
+      background-color: #dbdbdb;
+    }
+  }
+}
