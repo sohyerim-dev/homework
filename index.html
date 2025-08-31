@@ -69,7 +69,8 @@
       }
 
       .homework-links a:hover {
-        color: #007bff;
+        color: white;
+        background-color: rgb(0, 141, 242);
       }
 
       .homework-links li.complete span {
@@ -77,7 +78,14 @@
         width: 13px;
         height: 13px;
         margin-left: 5px;
-        background: white url(./src/assets/profiles/complete_mark.png) center / cover;
+        background: transparent url(./src/assets/profiles/complete_mark.png) center / cover;
+      }
+
+      img.cat {
+        width: 40%;
+        position: fixed;
+        left: 0;
+        top: 20%;
       }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet" />
@@ -100,9 +108,10 @@
         <li class="complete">
           <a href="src/avatars/avatars.html">아바타<span aria-label="완료"></span></a>
         </li>
-        <li><a href="">과제 3</a><span></span></li>
-        <li><a href="">과제 4</a><span></span></li>
+        <li><a href="">과제 3</a><span aria-labe="대기"></span></li>
+        <li><a href="">과제 4</a><span aria-labe="대기"></span></li>
       </ul>
     </div>
+    <img src="./src/assets/profiles/ 냥.png" alt="" class="cat" />
   </body>
 </html>
