@@ -1,10 +1,12 @@
 {
   "scripts": {
     "start": "live-server . --port=4000 --host=localhost --no-browser",
-    "format": "prettier . --check"
+    "format": "prettier . --check",
+    "webp": "simple-webp-converter"
   },
   "devDependencies": {
     "live-server": "^1.2.2",
-    "prettier": "^3.6.2"
+    "prettier": "^3.6.2",
+    "simple-webp-converter": "^1.0.3"
   }
 }
