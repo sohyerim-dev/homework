@@ -260,7 +260,6 @@ body {
           border-radius: 4px;
         }
         button {
-          vertical-align: top;
           font-size: var(--root-font-size);
           block-size: 24px;
           text-transform: uppercase;
