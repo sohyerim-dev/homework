@@ -69,6 +69,7 @@ body {
       flex-flow: column nowrap;
 
       input,
+      input:autofill,
       input:-webkit-autofill {
         block-size: 45px;
         box-sizing: border-box;
@@ -78,7 +79,9 @@ body {
         margin-block-end: var(--p-margin);
         font-size: var(--default-font-size);
         color: var(--text-color);
-        background-color: var(--white);
+        background-color: var(--white) !important;
+        box-shadow: 0 0 0px 1000px #fff inset;
+        -webkit-box-shadow: 0 0 0px 1000px #fff inset;
 
         &:focus {
           background-color: var(--focus-bg-color);
