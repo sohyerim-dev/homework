@@ -1,1 +1,282 @@
 /* CSS를 활용하여 레이아웃 및 스타일링을 완성해주세요 */
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+:root {
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif' !important;
+
+  /* Color styles */
+  --naver-green: #03cf5d;
+  --white: #ffffff;
+  --silver: #999999;
+  --silver-light: #dadada;
+  --warning-red: #ff1414;
+  --silver-dark: #666666;
+  --black-alpha10: #000000;
+  --black-dark: #333333;
+  --default-color: #121212;
+
+  /* Text-size styles */
+  --root-font-size: 16px;
+  --default-font-size: 0.875rem;
+  --small-font-size: 0.75rem;
+
+  --point-color: var(--naver-green);
+  --text-color: var(--black-dark);
+  --disable-color: var(--silver);
+  --border-color: var(--silver-light);
+  --warning-color: var(--warning-red);
+}
+
+body {
+  font-size: var(--root-font-size);
+  color: var(--default-color);
+}
+
+.login-wrapper {
+  --p-margin: 0.625rem;
+
+  inline-size: 100%;
+  min-block-size: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  /* 모바일&데스크탑 공통*/
+
+  .logo {
+    display: flex;
+    inline-size: 230px;
+    justify-content: center;
+    margin-block-start: 6.25rem;
+    svg {
+      vertical-align: top;
+    }
+  }
+  form {
+    --focus-border-color: #03cf5d;
+    --focus-bg-color: #e9f0fd;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+
+    inline-size: 100%;
+    padding-inline: 1.25rem;
+    box-sizing: border-box;
+
+    .input-wrapper {
+      display: flex;
+      flex-flow: column nowrap;
+
+      input {
+        block-size: 45px;
+        box-sizing: border-box;
+        border: 1px solid var(--border-color);
+        appearance: none;
+        padding-inline-start: 0.875rem;
+        margin-block-end: var(--p-margin);
+        font-size: var(--default-font-size);
+        color: var(--text-color);
+
+        &:focus {
+          background-color: var(--focus-bg-color);
+          border: 1px solid var(--focus-border-color);
+          outline: none;
+        }
+      }
+
+      input::placeholder {
+        color: var(--disable-color);
+        font-size: var(--default-font-size);
+      }
+
+      input[type='email']:invalid:not(:placeholder-shown) + p,
+      input[type='email']:focus:not(:valid) + p {
+        display: block;
+      }
+
+      input[type='password']:invalid:not(:placeholder-shown) + p,
+      input[type='password']:focus:not(:valid) + p {
+        display: block;
+      }
+
+      p {
+        display: none;
+        inline-size: 100%;
+        color: var(--warning-color);
+        font-size: var(--small-font-size);
+        line-height: 1.125rem;
+        margin-block-end: var(--p-margin);
+      }
+    }
+  }
+  .login-button {
+    background-color: var(--point-color);
+    color: var(--white);
+    border: 0 none;
+    block-size: 45px;
+    margin-block-start: 0.625rem;
+    font-size: var(--root-font-size);
+    font-weight: 700;
+    padding: 0;
+  }
+  .login-options {
+    display: flex;
+
+    margin-block-start: 0.625rem;
+    .login-remember {
+      display: inline-flex;
+      inline-size: fit-content;
+      flex-flow: row nowrap;
+      align-items: center;
+      position: relative;
+      input {
+        appearance: none;
+      }
+      input[type='checkbox'] {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        translate: 0 -50%;
+        inline-size: 24px;
+        block-size: 24px;
+        opacity: 0;
+        cursor: pointer;
+        margin: 0;
+        appearance: none;
+      }
+      svg {
+        position: absolute;
+        left: 0;
+        pointer-events: none;
+      }
+      input:not(:checked) ~ svg.checked {
+        display: none;
+      }
+      input:checked ~ svg.unchecked {
+        display: none;
+      }
+
+      #loginRememberInput:focus-visible:not(:checked) ~ svg.unchecked {
+        outline: 2px solid var(--default-color);
+        border-radius: 4px;
+      }
+      #loginRememberInput:focus-visible:checked ~ svg.checked {
+        outline: 2px solid var(--default-color);
+        border-radius: 4px;
+      }
+
+      label {
+        cursor: pointer;
+        margin-inline-start: 1.75rem;
+        margin-block: 0.25rem;
+        font-size: var(--default-font-size);
+        color: var(--text-color);
+        user-select: none;
+        -webkit-user-select: none;
+        display: inline-block;
+        &:focus-visible {
+          outline: 2px solid var(--default-color);
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}
+
+/* 모바일 (< 768px) */
+@media (max-width: 767px) {
+  .logo {
+    margin-block-end: 2.8125rem;
+  }
+
+  form {
+    .id-input-wrapper {
+      flex-flow: row wrap;
+
+      .input-space {
+        display: inline-flex;
+
+        inline-size: 100%;
+        block-size: 100%;
+        input {
+          inline-size: 100%;
+        }
+      }
+    }
+
+    .login-options {
+      justify-content: end;
+    }
+  }
+
+  .pc-only {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .login-wrapper {
+    inline-size: 460px;
+    margin: 0 auto;
+
+    .logo {
+      margin-block-end: 3.125rem;
+    }
+    .login-options {
+      font-size: var(--default-font-size);
+      justify-content: space-between;
+      .login-security {
+        position: relative;
+        a:focus {
+          outline: 2px solid var(--default-color);
+          border-radius: 4px;
+        }
+        .security-text::before {
+          content: 'IP 보안';
+          color: var(--text-color);
+        }
+
+        #securityRememberInput {
+          position: absolute;
+          inset-inline-end: 0;
+          inline-size: 30px;
+          block-size: 10px;
+          inset-block-start: 0;
+          opacity: 0;
+          cursor: pointer;
+        }
+
+        #securityRememberInput:focus-visible:not(:checked) ~ .security-off {
+          outline: 2px solid var(--default-color);
+          border-radius: 4px;
+        }
+        #securityRememberInput:focus-visible:checked ~ .security-on {
+          outline: 2px solid var(--default-color);
+          border-radius: 4px;
+        }
+        button {
+          text-transform: uppercase;
+          margin-inline-start: 0.5rem;
+          background: none;
+          border: 0 none;
+        }
+        button.on {
+          color: var(--point-color);
+          font-weight: 700;
+        }
+        button.off {
+          color: var(--disable-color);
+          font-weight: 700;
+        }
+
+        input:not(:checked) ~ button.on {
+          display: none;
+        }
+        input:checked ~ button.off {
+          display: none;
+        }
+      }
+    }
+  }
+}
