@@ -77,6 +77,7 @@ body {
         margin-block-end: var(--p-margin);
         font-size: var(--default-font-size);
         color: var(--text-color);
+        background-color: transparent;
 
         &:focus {
           background-color: var(--focus-bg-color);
