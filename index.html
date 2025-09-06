@@ -61,7 +61,11 @@
       }
 
       .homework-links a {
-        display: block;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+
         text-align: center;
         color: #555;
         text-decoration: none;
@@ -73,12 +77,15 @@
         background-color: rgb(0, 141, 242);
       }
 
-      .homework-links li.complete span {
-        display: inline-block;
-        width: 13px;
-        height: 13px;
-        margin-left: 5px;
-        background: transparent url(src/assets/profiles/complete_mark.png) center / cover;
+      .homework-links li.complete {
+        span {
+          display: inline-block;
+          margin-block-start: 1px;
+          width: 13px;
+          height: 13px;
+          margin-left: 5px;
+          background: transparent url(src/assets/profiles/complete_mark.png) center / cover;
+        }
       }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet" />
@@ -101,7 +108,7 @@
         <li class="complete">
           <a href="src/avatars/avatars.html">아바타<span aria-label="완료"></span></a>
         </li>
-        <li>
+        <li class="complete">
           <a href="src/login/login.html">로그인<span aria-label="완료"></span></a>
         </li>
         <li><a href="">과제 4</a><span aria-labe="대기"></span></li>
