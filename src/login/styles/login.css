@@ -82,12 +82,15 @@ body {
         background-color: var(--white) !important;
         box-shadow: 0 0 0px 1000px #fff inset;
         -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+      }
 
-        &:focus {
-          background-color: var(--focus-bg-color);
-          border: 1px solid var(--focus-border-color);
-          outline: none;
-        }
+      input:focus,
+      input:active {
+        background-color: var(--focus-bg-color);
+        box-shadow: 0 0 0px 1000px var(--focus-bg-color) inset;
+        -webkit-box-shadow: 0 0 0px 1000px var(--focus-bg-color) inset;
+        border: 1px solid var(--focus-border-color);
+        outline: none;
       }
 
       input::placeholder {
