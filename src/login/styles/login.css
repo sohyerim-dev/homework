@@ -228,6 +228,8 @@ body {
       justify-content: space-between;
       .login-security {
         position: relative;
+        display: flex;
+        align-items: center;
         a:focus {
           outline: 2px solid var(--default-color);
           border-radius: 4px;
@@ -241,10 +243,12 @@ body {
           position: absolute;
           inset-inline-end: 0;
           inline-size: 30px;
-          block-size: 12px;
+          block-size: 24px;
           inset-block-start: 0;
           opacity: 0;
           cursor: pointer;
+          margin: 0;
+          padding: 0;
         }
 
         #securityRememberInput:focus-visible:not(:checked) ~ .security-off {
@@ -256,8 +260,12 @@ body {
           border-radius: 4px;
         }
         button {
+          vertical-align: top;
+          font-size: var(--root-font-size);
+          block-size: 24px;
           text-transform: uppercase;
           margin-inline-start: 0.5rem;
+          padding-inline: 0;
           background: none;
           border: 0 none;
         }
