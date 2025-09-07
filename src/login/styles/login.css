@@ -79,18 +79,24 @@ body {
         margin-block-end: var(--p-margin);
         font-size: var(--default-font-size);
         color: var(--text-color);
+
         background-color: var(--white) !important;
+
+        /* 에이전트 스타일 속성 해결 */
         box-shadow: 0 0 0px 1000px #fff inset;
         -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+        -webkit-text-fill-color: var(--text-color);
       }
 
       input:focus,
       input:active {
         background-color: var(--focus-bg-color);
-        box-shadow: 0 0 0px 1000px var(--focus-bg-color) inset;
-        -webkit-box-shadow: 0 0 0px 1000px var(--focus-bg-color) inset;
         border: 1px solid var(--focus-border-color);
         outline: none;
+
+        /* 에이전트 스타일 속성 해결 */
+        box-shadow: 0 0 0px 1000px var(--focus-bg-color) inset;
+        -webkit-box-shadow: 0 0 0px 1000px var(--focus-bg-color) inset;
       }
 
       input::placeholder {
