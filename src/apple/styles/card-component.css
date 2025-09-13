@@ -7,7 +7,7 @@
   justify-items: center;
   padding-block-start: var(--large-spacing);
   gap: var(--small-spacing);
-  block-size: 500px;
+  block-size: 600px;
   align-content: start;
   background-position: center 50%;
   background-size: cover;
@@ -17,7 +17,7 @@
     font-size: var(--large-text);
   }
   .product-intro {
-    font-size: var(--medium-text);
+    font-size: var(--base-text);
     text-align: center;
   }
   .release-info {
@@ -46,6 +46,22 @@
 
     li:nth-child(2) {
       background-color: transparent;
+    }
+  }
+
+  @media (width >= 1024px) {
+    padding-block-start: var(--extra-large-spacing);
+
+    .product-name {
+      font-size: var(--extra-large-text);
+    }
+
+    .product-intro {
+      font-size: var(--medium-text);
+    }
+
+    .product-links ul li {
+      font-size: var(--x-small-text);
     }
   }
 }
