@@ -7,7 +7,7 @@
   justify-items: center;
   padding-block-start: var(--large-spacing);
   gap: var(--small-spacing);
-  block-size: 600px;
+  block-size: 500px;
   align-content: start;
   background-position: center 50%;
   background-size: cover;
