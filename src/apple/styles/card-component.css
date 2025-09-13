@@ -32,7 +32,11 @@
     li {
       border-radius: 30px;
       font-size: var(--xx-small-text);
-      padding: var(--x-small-spacing);
+
+      a {
+        padding: var(--x-small-spacing);
+        display: block;
+      }
     }
 
     li:nth-child(2) {
