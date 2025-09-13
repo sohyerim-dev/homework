@@ -7,36 +7,43 @@ main {
   gap: var(--base-spacing);
 
   .ipad-pro {
+    background-color: var(--black);
     background-image: -webkit-image-set(url('../products/ipad_pro.jpeg') 1x, url('../products/ipad_pro_2x.jpeg') 2x);
     background-image: image-set(url('../products/ipad_pro.jpeg') 1x, url('../products/ipad_pro_2x.jpeg') 2x);
   }
 
   .ipad-air {
+    background-color: var(--blue-100);
     background-image: -webkit-image-set(url('../products/ipad_air.jpeg') 1x, url('../products/ipad_air_2x.jpeg') 2x);
     background-image: image-set(url('../products/ipad_air.jpeg') 1x, url('../products/ipad_air_2x.jpeg') 2x);
   }
 
   .iphone-15-pro {
+    background-color: var(--black);
     background-image: -webkit-image-set(url('../products/iphone15_pro.jpeg') 1x, url('../products/iphone15_pro_2x.jpeg') 2x);
     background-image: image-set(url('../products/iphone15_pro.jpeg') 1x, url('../products/iphone15_pro_2x.jpeg') 2x);
   }
 
   .iphone-15 {
+    background-color: var(--white);
     background-image: -webkit-image-set(url('../products/iphone15.jpeg') 1x, url('../products/iphone15_2x.jpeg') 2x);
     background-image: image-set(url('../products/iphone15.jpeg') 1x, url('../products/iphone15_2x.jpeg') 2x);
   }
 
   .watch {
+    background-color: var(--black);
     background-image: -webkit-image-set(url('../products/apple_watch.jpeg') 1x, url('../products/apple_watch5_2x.jpeg') 2x);
     background-image: image-set(url('../products/apple_watch.jpeg') 1x, url('../products/apple_watch_2x.jpeg') 2x);
   }
 
   .macbook-air {
+    background-color: var(--white);
     background-image: -webkit-image-set(url('../products/macbook_air.jpeg') 1x, url('../products/macbook_air_2x.jpeg') 2x);
     background-image: image-set(url('../products/macbook_air.jpeg') 1x, url('../products/macbook_air_2x.jpeg') 2x);
   }
 
   .airpods-pro {
+    background-color: var(--black);
     background-image: -webkit-image-set(url('../products/airpods_pro.jpeg') 1x, url('../products/airpods_pro_2x.jpeg') 2x);
     background-image: image-set(url('../products/airpods_pro.jpeg') 1x, url('../products/airpods_pro_2x.jpeg') 2x);
   }
@@ -74,6 +81,10 @@ main {
 
 .line-height {
   line-height: var(--line-normal);
+
+  @media (width >= 1024px) {
+    line-height: inherit;
+  }
 }
 
 .release-info {

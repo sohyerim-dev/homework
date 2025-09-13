@@ -63,5 +63,9 @@
     .product-links ul li {
       font-size: var(--x-small-text);
     }
+
+    .mobile-only {
+      display: none;
+    }
   }
 }
