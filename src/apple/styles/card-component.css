@@ -37,6 +37,11 @@
         padding: var(--x-small-spacing);
         display: block;
       }
+      a:focus-visible {
+        outline: 2px solid currentColor;
+        outline-offset: 3px;
+        border-radius: 30px;
+      }
     }
 
     li:nth-child(2) {
