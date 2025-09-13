@@ -30,13 +30,15 @@
     gap: var(--base-spacing);
 
     li {
-      border-radius: 30px;
-      font-size: var(--xx-small-text);
+      display: contents;
 
       a {
+        border-radius: 30px;
+        font-size: var(--xx-small-text);
         padding: var(--x-small-spacing);
         display: block;
       }
+
       a:focus-visible {
         outline: 2px solid currentColor;
         outline-offset: 3px;
