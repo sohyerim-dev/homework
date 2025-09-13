@@ -1,3 +1,100 @@
-@import "./card-component.css";
+@import './card-component.css';
 
 /* 카드 레이아웃 */
+
+main {
+  display: grid;
+  gap: var(--base-spacing);
+
+  .ipad-pro {
+    background-image: -webkit-image-set(url('../products/ipad_pro.jpeg') 1x, url('../products/ipad_pro_2x.jpeg') 2x);
+    background-image: image-set(url('../products/ipad_pro.jpeg') 1x, url('../products/ipad_pro_2x.jpeg') 2x);
+  }
+
+  .ipad-air {
+    background-image: -webkit-image-set(url('../products/ipad_air.jpeg') 1x, url('../products/ipad_air_2x.jpeg') 2x);
+    background-image: image-set(url('../products/ipad_air.jpeg') 1x, url('../products/ipad_air_2x.jpeg') 2x);
+  }
+
+  .iphone-15-pro {
+    background-image: -webkit-image-set(url('../products/iphone15_pro.jpeg') 1x, url('../products/iphone15_pro_2x.jpeg') 2x);
+    background-image: image-set(url('../products/iphone15_pro.jpeg') 1x, url('../products/iphone15_pro_2x.jpeg') 2x);
+  }
+
+  .iphone-15 {
+    background-image: -webkit-image-set(url('../products/iphone15.jpeg') 1x, url('../products/iphone15_2x.jpeg') 2x);
+    background-image: image-set(url('../products/iphone15.jpeg') 1x, url('../products/iphone15_2x.jpeg') 2x);
+  }
+
+  .watch {
+    background-image: -webkit-image-set(url('../products/apple_watch.jpeg') 1x, url('../products/apple_watch5_2x.jpeg') 2x);
+    background-image: image-set(url('../products/apple_watch.jpeg') 1x, url('../products/apple_watch_2x.jpeg') 2x);
+  }
+
+  .macbook-air {
+    background-image: -webkit-image-set(url('../products/macbook_air.jpeg') 1x, url('../products/macbook_air_2x.jpeg') 2x);
+    background-image: image-set(url('../products/macbook_air.jpeg') 1x, url('../products/macbook_air_2x.jpeg') 2x);
+  }
+
+  .airpods-pro {
+    background-image: -webkit-image-set(url('../products/airpods_pro.jpeg') 1x, url('../products/airpods_pro_2x.jpeg') 2x);
+    background-image: image-set(url('../products/airpods_pro.jpeg') 1x, url('../products/airpods_pro_2x.jpeg') 2x);
+  }
+
+  @media (width >= 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+
+    .ipad-pro {
+      background-image: -webkit-image-set(url('../products/ipad_pro_wide.jpeg') 1x, url('../products/ipad_pro_wide_2x.jpeg') 2x);
+      background-image: image-set(url('../products/ipad_pro_wide.jpeg') 1x, url('../products/ipad_pro_wide_2x.jpeg') 2x);
+    }
+
+    .ipad-air {
+      background-image: -webkit-image-set(url('../products/ipad_air_wide.jpeg') 1x, url('../products/ipad_air_wide_2x.jpeg') 2x);
+      background-image: image-set(url('../products/ipad_air_wide.jpeg') 1x, url('../products/ipad_air_wide_2x.jpeg') 2x);
+    }
+
+    .iphone-15-pro {
+      background-image: -webkit-image-set(url('../products/iphone15_pro_wide.jpeg') 1x, url('../products/iphone15_pro_wide_2x.jpeg') 2x);
+      background-image: image-set(url('../products/iphone15_pro_wide.jpeg') 1x, url('../products/iphone15_pro_wide_2x.jpeg') 2x);
+    }
+
+    .card:nth-child(-n + 3) {
+      grid-column: 1 / -1;
+    }
+  }
+}
+
+.font-white {
+  color: var(--white);
+}
+.font-black {
+  color: var(--black);
+}
+
+.line-height {
+  line-height: var(--line-normal);
+}
+
+.release-info {
+  color: var(--gray);
+}
+
+.blue-bg-button {
+  background-color: var(--blue-100);
+}
+
+.blue-font-button {
+  box-shadow: 0 0 0 1px var(--blue-100);
+  color: var(--blue-100);
+}
+
+.black-bg-button {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.black-font-button {
+  box-shadow: 0 0 0 1px var(--black);
+  color: var(--black);
+}
